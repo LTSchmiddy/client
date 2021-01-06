@@ -1,0 +1,11 @@
+@import "common_vars";
+
+.navbar {
+    background-color: black;
+    vertical-align: middle;
+
+    .app-name {
+        padding: 0px 5px;
+        color: white;
+    }
+}

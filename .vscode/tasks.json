@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "Build Webpack (NPM)",
+			"detail": "webpack",
+			"promptOnClose": false
+		},
+		{
+			"label": "Start Cordova Electron",
+			"type": "shell",
+			"command": "cordova",
+			"args": [
+				"run",
+				"electron",
+				"--nobuild",
+			]
+		},
+		{
+			"label": "Prepare Cordova Electron",
+			"type": "shell",
+			"command": "cordova",
+			"args": [
+				"prepare",
+				"electron",
+				"--nobuild",
+			]
+		},
+		{
+			"label": "Build and Prepare Electron",
+			"type": "shell",
+			"command": "cordova",
+			"args": [
+				"prepare",
+				"electron",
+				"--nobuild",
+			],
+			"dependsOn": [
+				"Build Webpack (NPM)"
+			]
+		}
+	]
+}

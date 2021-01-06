@@ -1,0 +1,38 @@
+@import "common_vars";
+
+$pane-controller-height: 24px;
+
+.view-parent {
+    width: 100vw;
+    height: 100vh;
+
+    .navbar {
+        width: 100%;
+        height: $navbar-height;
+    }
+
+    .main-view {
+        width: 100%;
+        height: calc(100% - #{$navbar-height});
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: 1fr;
+        // overflow-x: auto;
+
+        .pane-container {
+            width: 1fr;
+            height: 100%;
+
+            .pane-parent {
+                width: 100%;
+                height: calc(100% - #{$pane-controller-height});
+            }
+
+            .pane-container {
+                width: 100%;
+                height: #{$pane-controller-height};
+            }
+        }
+    }
+}

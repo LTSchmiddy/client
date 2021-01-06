@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-nativestorage","cordova-plugin-file","cordova-plugin-ip-mac-address"]}

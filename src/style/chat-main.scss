@@ -1,0 +1,50 @@
+@import "common_vars";
+
+.chat-view {
+    // position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    .message-view-head {
+        width: 100%;
+        height: $view-head-height;
+        
+        background-color: $pane-head-bg-color;
+    }
+
+    .messages-view {
+        width: 100%;
+        height: calc(100% - #{$view-head-height} - #{$chat-input-height});
+        overflow-y: scroll;
+        
+        background-color: $pane-bg-color;
+
+        .message {
+            width: 100%;
+            color: whitesmoke;
+        
+            background-color: #333377;
+        }
+    }
+
+    .chat-input {
+        width: 100%;
+        height: $chat-input-height;
+        
+        background-color: green;
+
+        .input-field {
+            width: calc(100% - #{$chat-send-button-width});
+            height: 100%;
+
+            background-color: #00000000;
+            border: none;
+        }
+        
+        .send-button {
+            width: $chat-send-button-width;
+            height: 100%;
+        }
+    }
+}
