@@ -1,3 +1,4 @@
 {
-    "eslint.nodePath": "${workspaceFolder}/src"
+    "eslint.nodePath": "${workspaceFolder}/src",
+    "eslint.enable": false
 }
